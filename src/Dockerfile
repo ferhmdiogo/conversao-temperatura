@@ -1,7 +1,7 @@
-FROM node:14.15.4
-WORKDIR /app
+FROM node:17
+WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install
 COPY . .
 EXPOSE 8084
-CMD ["node", "server.js"]
+CMD [ "node", "server.js" ]
